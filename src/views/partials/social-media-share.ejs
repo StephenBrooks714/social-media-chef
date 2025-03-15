@@ -1,0 +1,85 @@
+<style>
+    .share__link {
+        border: none;
+
+        > * {
+            pointer-events: none;
+        }
+    }
+</style>
+<div class="row align-items-center">
+    <div class="col-lg-10">
+        <div class="share__wrapper">
+            <span class="fw-bold">Share this recipe:</span>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="share__link share__link--facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="sr-only">Share on Facebook</span>
+                    </button>
+                    <button class="share__link share__link--twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="sr-only">Share on Twitter</span>
+                    </button>
+                    <button class="share__link share__link--linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="sr-only">Share on LinkedIn</span>
+                    </button>
+                    <button class="share__link share__link--mail">
+                        <i class="far fa-envelope"></i>
+                        <span class="sr-only">Share via Mail</span>
+                    </button>
+                    <button class="share__link share__link--whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="sr-only">Share on WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = setShareLinks;
+
+    function setShareLinks() {
+        var pageUrl = encodeURIComponent(document.URL);
+        var pageTitle = encodeURIComponent(document.title);
+
+        document.addEventListener('click', function (event) {
+            let url = null;
+
+            if (event.target.classList.contains('share__link--facebook')) {
+                url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+                socialWindow(url, 570, 570);
+            }
+
+            if (event.target.classList.contains('share__link--twitter')) {
+                url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + pageTitle;
+                socialWindow(url, 570, 300);
+            }
+
+            if (event.target.classList.contains('share__link--linkedin')) {
+                url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+                socialWindow(url, 570, 570);
+            }
+
+            if (event.target.classList.contains('share__link--whatsapp')) {
+                url = "whatsapp://send?text=" + pageTitle + "%20" + pageUrl;
+                socialWindow(url, 570, 450);
+            }
+
+            if (event.target.classList.contains('share__link--mail')) {
+                url = "mailto:?subject=%22" + pageTitle + "%22&body=Read%20the%20article%20%22" + pageTitle + "%22%20on%20" + pageUrl;
+                socialWindow(url, 570, 450);
+            }
+
+        }, false);
+    }
+
+    function socialWindow(url, width, height) {
+        var left = (screen.width - width) / 2;
+        var top = (screen.height - height) / 2;
+        var params = "menubar=no,toolbar=no,status=no,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left;
+        window.open(url,"",params);
+    }
+</script>

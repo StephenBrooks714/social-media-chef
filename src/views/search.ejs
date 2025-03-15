@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <!-- content here -->
+    <%- include('layouts/navbar') -%>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 140px; margin-bottom: 70px;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12 mb-6 text-center">
+                <h1>Search Results</h1>
+            </div>
+            <% if(recipes != "") { %>
+                <% recipes.forEach(function(recipe) { %>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card">
+                            <img src="<%- recipe.image %>" class="card-img-top" alt="<%- recipe.title %>">
+                            <div class="card-body">
+                                <h5 class="card-title"><%- recipe.title %></h5>
+                                <p class="card-text"><%- recipe.description %></p>
+                                <a href="/singleRecipe/<%- recipe._id %>" class="btn btn-primary">View Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </section>
+</main>
+
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="/mdb.umd.min.js"
+></script>
+<script type="text/javascript" src="/jquery.min.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>

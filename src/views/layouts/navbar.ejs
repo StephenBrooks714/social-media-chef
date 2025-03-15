@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Logo</a>
+        <button
+                data-mdb-collapse-init
+                class="navbar-toggler"
+                type="button"
+                data-mdb-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            data-mdb-dropdown-init
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            aria-expanded="false"
+                    >
+                        Features
+                    </a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <% if(!loggedIn) { %>
+                        <a class="btn btn-floating me-2 btn-primary"
+                           data-mdb-ripple-init
+                           data-mdb-ripple-color="light"
+                           href="/login">
+                            <i class="fas text-white fa-right-to-bracket"></i>
+                        </a>
+                    <% } else { %>
+                            <a class="btn btn-floating me-2 btn-primary"
+                               data-mdb-ripple-init
+                               data-mdb-ripple-color="light"
+                               href="/logout/user">
+                                <i class="fas text-white fa-right-from-bracket"></i>
+                            </a>
+                    <% } %>
+                </li>
+                <% if(loggedIn) { %>
+                    <li class="nav-item">
+                        <a class="btn btn-floating me-2 btn-primary"
+                           data-mdb-ripple-init
+                           data-mdb-ripple-color="light"
+                           href="/actions">
+                            <i class="fas fa-gears"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <li class="nav-item">
+                    <form class="d-flex input-group w-auto" method="post" action="/search">
+                        <input
+                                type="search"
+                                name="searchTerm"
+                                class="form-control rounded"
+                                placeholder="Search"
+                                aria-label="Search"
+                                required
+                                aria-describedby="search-addon"
+                        />
+                        <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas text-dark fa-search"></i>
+                      </span>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,99 @@
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.delay-1s {
+    animation-delay: 0.4s;
+}
+.delay-2s {
+    animation-delay: 0.7s;
+}
+.delay-3s {
+    animation-delay: 0.9s;
+}
+.delay-4s {
+    animation-delay: 1s;
+}
+
+.blue-purple-gradient-animated-bg {
+    background: linear-gradient(-45deg, #00d2ff, #3a7bd5);
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3379856/910/606/m2/fpnw/wm1/pfhgxchmb2ttmklouoabchtigsyma36lawo3w97ycjnyahr5vku9hequuk1beweg-.jpg?1507495665&s=f543aff29ff26beaeeccd447677f3f56")
+    no-repeat center center fixed;
+    background-size: cover;
+    height: 90vh;
+}

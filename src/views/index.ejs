@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header class="intro">
+    <%- include('layouts/navbar') -%>
+<!-- content here -->
+    <section class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-lg-10 text-center text-white">
+                <h1 class="mb-2 fadeInDown fw-bold display-4">Social Media chef</h1>
+                <p class="lead fadeInLeft delay-1s">
+                    Bringing to you many posted recipes from chefs around the world.
+                </p>
+                <% if(loggedIn) { %>
+                    <a href="#!"  data-mdb-ripple-init class="btn me-2 btn-primary fadeInUp delay-2s">Submit Recipe</a>
+                <% } else { %>
+                    <a href="/register"  data-mdb-ripple-init class="btn me-2 btn-primary fadeInUp delay-2s">Join Us!!</a>
+                <% } %>
+                <a href="#!"  data-mdb-ripple-init class="btn me-2 btn-primary fadeInUp delay-3s">View Latest</a>
+            </div>
+        </div>
+    </section>
+</header>
+
+<main>
+    <section class="container my-5 py-5">
+        <div class="row justify-content-center mb-3">
+            <div class="col-6">
+                <p class="h3 fw-bold">View Latest Recipes</p>
+            </div>
+            <div class="col-6 text-end">
+                <a href="/recipes">View All</a>
+            </div>
+        </div>
+        <article class="row justify-content-center text-center mb-7">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card hover-zoom bg-image">
+                    <a href="#!">
+                        <img src="https://static.fanpage.it/wp-content/uploads/sites/22/2020/06/iStock-1155240408.jpg"
+                             class="img-fluid"
+                             alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card hover-zoom bg-image">
+                    <a href="#!">
+                        <img src="https://auspost.com.au/content/dam/corp/travel-essentials/destination-guides/italy/photo-antipasto-platter-italian-food.jpg"
+                             class="img-fluid"
+                             alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card hover-zoom bg-image">
+                    <a href="#!">
+                        <img src="https://www.publicdomainpictures.net/pictures/150000/velka/delicious-meal.jpg"
+                             class="img-fluid"
+                             alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card hover-zoom bg-image">
+                    <a href="#!">
+                        <img src="https://www.comeindubai.com/wp-content/uploads/2021/04/fast-food-dubai-scaled.jpeg"
+                             class="img-fluid"
+                             alt="image">
+                    </a>
+                </div>
+            </div>
+        </article>
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-3">
+                <h2 class="mb-2 h4 fw-bold">Feature Title Section</h2>
+                <p class="mb-2 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque dignissimos doloribus illum, molestiae molestias nihil quidem quos recusandae tenetur! Adipisci atque aut beatae error est eum itaque placeat quis?
+                </p>
+                <%- include('partials/social-media-share') -%>
+            </div>
+            <div class="col-lg-5 mb-3">
+                <img src="https://wallpaperaccess.com/full/767042.jpg"
+                     class="h-100 w-100 shadow-lg" alt="section image">
+            </div>
+        </div>
+    </section>
+    <section>
+
+        <div class="bg-image bg-fixed text-center"
+             style="background-image:url('https://mdbootstrap.com/img/Others/food5.jpg'); height: 460px;">
+            <div class="mask" style="background-color: rgba(0,0,0,.7);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <p class="h1 text-uppercase mb-5">Great people trusted our services</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h2 class="h1 text-success">+950</h2>
+                                <p class="mb-md-0">Happy clients</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h2 class="h1 text-success">+150</h2>
+                                <p class="mb-md-0">Projects completed</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h2 class="h1 text-success">+85</h2>
+                                <p class="mb-md-0">Winning awards</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h2 class="h1 text-success">+246</h2>
+                                <p class="mb-0">Cups of coffee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="container my-5 py-5">
+
+        <!--Section: Design Block-->
+        <section class="mb-7">
+
+            <div class="lightbox" data-mdb-lightbox-init>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" alt="Lightbox image 1"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(48).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(48).jpg" alt="Lightbox image 2"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" alt="Lightbox image 3"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(44).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(44).jpg" alt="Lightbox image 1"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(41).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(41).jpg" alt="Lightbox image 2"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg"
+                             data-mdb-img="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg" alt="Lightbox image 3"
+                             class="w-100 shadow-1-strong rounded" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Section: Design Block-->
+        <section>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">All European cuisine in one place</h4>
+                    <p class="text-muted mb-4 pb-1">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                        atque corrupti quos dolores et quas molstias excepturi sint occaecati cupiditate non provident, similique
+                        sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    </p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal">
+                        See full menu
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Most Popular <i class="fas fa-fire-flame-curved"></i></h5>
+                                    <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto cumque dolore ducimus error eveniet excepturi hic id, iure libero nihil nobis praesentium sequi soluta vitae voluptate voluptatem! Accusamus, dignissimos.
+                                    </p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-mdb-ripple-init data-mdb-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pb-2">
+                    <img src="https://mdbootstrap.com/img/Others/food.jpg" class="img-fluid" alt="Sample image" />
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<style>
+    .intro {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("<%- recipe.image %>") no-repeat center center fixed;
+        background-size: cover;
+        height: 50vh;
+    }
+</style>
+<header class="intro">
+    <!-- content here -->
+    <%- include('layouts/navbar') -%>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 60vh;">
+            <div class="col-lg-10 text-center text-white">
+                <h1 class="mb-2 fadeInDown fw-bold display-4"><%- recipe.title %></h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container my-3 py-3">
+        <div class="row justify-content-center text-center align-items-center">
+            <div class="col-md-4">
+                <p>Category: <%- recipe.category %></p>
+            </div>
+            <div class="col-md-4">
+                <p>Prep Time: <%- recipe.prepTime %></p>
+            </div>
+            <div class="col-md-4">
+                <p>Serves: <%- recipe.servings %></p>
+            </div>
+            <div class="col-lg-10">
+                <p><%- recipe.description %></p>
+            </div>
+            <div class="col-lg-10">
+                <p><%- recipe.ingredients %></p>
+            </div>
+            <div class="col-lg-10">
+                <p><%- recipe.directions %></p>
+            </div>
+            <div class="col-lg-10">
+                <p><%- recipe.directions2 %></p>
+            </div>
+            <div class="col-lg-10">
+                <p><%- recipe.directions3 %></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+</body>
+</html>

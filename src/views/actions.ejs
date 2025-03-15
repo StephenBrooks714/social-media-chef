@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <!-- content here -->
+    <%- include('layouts/navbar') -%>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 140px; margin-bottom: 70px;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12 mb-6 text-center">
+                <h1 class="display-3 fw-bold">Page Actions</h1>
+                <h2 class="h2">This will make updates to the website</h2>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Send Invitations</h5>
+                        <p class="card-text">Invite a new user to the database</p>
+                        <a href="#!" class="btn btn-primary">Add User</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Add a recipe</h5>
+                        <p class="card-text">Add a new recipe to the database</p>
+                        <a href="/newRecipe" class="btn btn-primary">Add Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Add A Banner</h5>
+                        <p class="card-text">Update the existing banner statistics.</p>
+                        <a href="/updateUser" class="btn btn-primary">Update Banner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Add A Webpage</h5>
+                        <p class="card-text">Update the existing navbar & pages.</p>
+                        <a href="/updateUser" class="btn btn-primary">New Page(s)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('layouts/footer') -%>
+</body>
+</html>
